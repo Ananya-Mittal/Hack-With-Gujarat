@@ -1,0 +1,305 @@
+/* Cart.css - Beautiful shopping cart styling */
+
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .cart-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+  }
+  
+  .cart-count {
+    background-color: #f3f4f6;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4b5563;
+  }
+  
+  /* Empty Cart Styling */
+  .empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 300px;
+    padding: 3rem;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  }
+  
+  .empty-cart-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+  }
+  
+  .empty-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #374151;
+  }
+  
+  .empty-cart-message {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    max-width: 400px;
+  }
+  
+  .continue-shopping-btn {
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .continue-shopping-btn:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.25);
+  }
+  
+  /* Cart Content Layout */
+  .cart-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 900px) {
+    .cart-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Cart Item Styling */
+  .cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cart-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    border: 1px solid #eaeaea;
+  }
+  
+  .cart-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 600px) {
+    .cart-item {
+      grid-template-columns: 80px 1fr;
+      grid-template-rows: auto auto;
+    }
+    
+    .cart-item-actions {
+      grid-column: 1 / span 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+  }
+  
+  .cart-item-image {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #94a3b8;
+  }
+  
+  .cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.3rem 0;
+  }
+  
+  .item-brand {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .item-delivery {
+    font-size: 0.85rem;
+    color: #475569;
+  }
+  
+  .delivery-label {
+    font-weight: 500;
+  }
+  
+  .cart-item-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+  }
+  
+  .item-price {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #fee2e2;
+    text-decoration: underline;
+  }
+  
+  /* Cart Summary Styling */
+  .cart-summary {
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: sticky;
+    top: 2rem;
+    border: 1px solid #eaeaea;
+  }
+  
+  .summary-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    color: #1e293b;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+    color: #64748b;
+  }
+  
+  .summary-row.total {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1e293b;
+  }
+  
+  .summary-row.free-shipping {
+    color: #16a34a;
+    font-weight: 500;
+  }
+  
+  .summary-divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 0.75rem 0;
+  }
+  
+  .checkout-btn {
+    display: block;
+    width: 100%;
+    background-color: #4f46e5;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.25);
+  }
+  
+  .continue-shopping-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+  
+  .continue-shopping-link:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+  }
