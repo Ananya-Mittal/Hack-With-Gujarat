@@ -83,8 +83,8 @@ Our goal is to help Indian women entrepreneurs—especially in Tier 2 and Tier 3
 ---
 
 ## Authors
-- Ananya Mittal
-- Pari Bhoomi
+- **Ananya Mittal**
+- **Pari Bhoomi**
 
 
 
